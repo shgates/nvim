@@ -16,6 +16,12 @@ vim.g.mapleader = " "
 
 require("lazy").setup({
 	spec = {
+		{ -- insert before LazyVim! -- Deletes leader keymaps
+			"abeldekat/lazyvim-menu-addon",
+			version = "*",
+			import = "lazyvim_menu_addon.hook",
+			opts = { leaders_to_change = { l = "X" } },
+		},
 		-- add LazyVim and import its plugins
 		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
 		-- import/override with your plugins
