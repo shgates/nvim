@@ -1,8 +1,15 @@
 return {
-	"ellisonleao/gruvbox.nvim",
-	priority = 1000,
-	config = true,
-	opts = {
-		transparent_mode = true,
+	{ "ellisonleao/gruvbox.nvim" },
+	{ "rebelot/kanagawa.nvim" },
+	{ "catppuccin/nvim", name = "catppuccin", lazy = false },
+
+	-- Configure LazyVim to load colorscheme
+	{
+		"LazyVim/LazyVim",
+		opts = {
+			colorscheme = "kanagawa",
+		},
 	},
+
+	{ "xiyaowong/transparent.nvim" },
 }
